@@ -10,7 +10,7 @@ public class WarlockTest {
 
     @Before
     public void before() {
-        mudblood = new Warlock("Mudblood", "Warlock", 100, "Skinless");
+        mudblood = new Warlock("Mudblood", "Warlock", 100, "Skinless", "Margaret Thatcher");
     }
 
     @Test
@@ -31,5 +31,10 @@ public class WarlockTest {
     @Test
     public void hasWand() {
         assertEquals("Skinless", mudblood.getWand());
+    }
+
+    @Test
+    public void hasDemonGod() {
+        assertEquals("Margaret Thatcher", mudblood.getDemonGod());
     }
 }
