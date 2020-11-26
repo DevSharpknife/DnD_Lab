@@ -1,6 +1,8 @@
 package Players;
 
-public class Warlock extends Caster {
+import Behaviours.ICast;
+
+public class Warlock extends Caster implements ICast {
 
     private String demonGod;
 
@@ -11,5 +13,10 @@ public class Warlock extends Caster {
 
     public String getDemonGod() {
         return demonGod;
+    }
+
+    @Override
+    public void spellAttack(Baddie baddie, int damage) {
+        baddie.removeHp(damage);
     }
 }
