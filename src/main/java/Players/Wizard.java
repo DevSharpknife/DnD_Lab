@@ -1,6 +1,8 @@
 package Players;
 
-public class Wizard extends Caster {
+import Behaviours.ICast;
+
+public class Wizard extends Caster implements ICast {
 
     private String robes;
 
@@ -15,5 +17,10 @@ public class Wizard extends Caster {
 
     public void setRobes(String robes) {
         this.robes = robes;
+    }
+
+    @Override
+    public void spellAttack(Baddie baddie, int damage) {
+        baddie.removeHp(damage);
     }
 }
