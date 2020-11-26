@@ -19,6 +19,6 @@ public class Cleric extends Character implements IHeal {
 
     @Override
     public void heal(Character character, int health) {
-        character.setHp(character.getHp() + health);
+        character.addHP(health);
     }
 }

@@ -1,6 +1,9 @@
 package Players;
 
-public class Dwarf extends Melee {
+import Behaviours.IAttack;
+import Enemies.Baddie;
+
+public class Dwarf extends Melee implements IAttack {
     private String beard;
 
     public Dwarf(String name, String type, int hp, String beard) {
@@ -14,5 +17,10 @@ public class Dwarf extends Melee {
 
     public void setBeard(String beard) {
         this.beard = beard;
+    }
+
+    @Override
+    public void attack(Baddie baddie, int damage) {
+        baddie.removeHP(damage);
     }
 }

@@ -1,3 +1,4 @@
+import Enemies.Thatcher;
 import Players.Knight;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class KnightTest {
 
     Knight knight;
+    Thatcher thatcher;
 
     @Before
     public void setUp() {
@@ -55,6 +57,13 @@ public class KnightTest {
     public void canSetArmour() {
         knight.setArmour("Shining");
         assertEquals("Shining", knight.getArmour());
+    }
+
+    @Test
+    public void canAttackBaddie() {
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, "Venomous Tongue");
+        knight.attack(thatcher, 50);
+        assertEquals(950, thatcher.getHP());
     }
 }
 

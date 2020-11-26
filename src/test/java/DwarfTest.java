@@ -1,3 +1,4 @@
+import Enemies.Thatcher;
 import Players.Dwarf;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class DwarfTest {
 
     Dwarf dwarf;
+    Thatcher thatcher;
 
     @Before
     public void setUp() {
@@ -55,6 +57,13 @@ public class DwarfTest {
     public void canSetBeard() {
         dwarf.setBeard("Braided Ginger Dream Beard");
         assertEquals("Braided Ginger Dream Beard", dwarf.getBeard());
+    }
+
+    @Test
+    public void canAttackBaddie() {
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, "Venomous Tongue");
+        dwarf.attack(thatcher, 50);
+        assertEquals(950, thatcher.getHP());
     }
 }
 

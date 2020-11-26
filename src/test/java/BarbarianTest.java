@@ -1,3 +1,4 @@
+import Enemies.Thatcher;
 import Players.Barbarian;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class BarbarianTest {
 
     Barbarian barbarian;
+    Thatcher thatcher;
 
     @Before
     public void setUp() {
@@ -55,5 +57,12 @@ public class BarbarianTest {
     public void canSetLoinCloth() {
         barbarian.setLoinCloth("Nappy");
         assertEquals("Nappy", barbarian.getLoinCloth());
+    }
+
+    @Test
+    public void canAttackBaddie() {
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, "Venomous Tongue");
+        barbarian.attack(thatcher, 50);
+        assertEquals(950, thatcher.getHP());
     }
 }

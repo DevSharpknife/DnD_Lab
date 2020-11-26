@@ -1,6 +1,9 @@
 package Players;
 
-public class Knight extends Melee{
+import Behaviours.IAttack;
+import Enemies.Baddie;
+
+public class Knight extends Melee implements IAttack {
     private String armour;
 
     public Knight(String name, String type, int hp, String armour) {
@@ -14,5 +17,10 @@ public class Knight extends Melee{
 
     public void setArmour(String newArmour) {
         this.armour = newArmour;
+    }
+
+    @Override
+    public void attack(Baddie baddie, int damage) {
+        baddie.removeHP(damage);
     }
 }
