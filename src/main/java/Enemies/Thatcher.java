@@ -1,6 +1,8 @@
 package Enemies;
 
-public class Thatcher extends Baddie {
+import Behaviours.IAttack;
+
+public class Thatcher extends Baddie implements IAttack {
     private String weapon;
 
     public Thatcher(String name, String type, int hp, int loot, String weapon) {
@@ -14,5 +16,10 @@ public class Thatcher extends Baddie {
 
     public void setWeapon(String weapon) {
         this.weapon = weapon;
+    }
+
+    @Override
+    public void attack(Character character, int damage) {
+        character.removeHP(damage);
     }
 }

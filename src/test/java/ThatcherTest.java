@@ -1,4 +1,5 @@
 import Enemies.Thatcher;
+import Players.Cleric;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class ThatcherTest {
 
     Thatcher thatcher;
+    Cleric nightingale;
 
     @Before
     public void setUp() {
@@ -67,6 +69,13 @@ public class ThatcherTest {
     public void canRemoveHP() {
         thatcher.removeHP(100);
         assertEquals(900, thatcher.getHP());
+    }
+
+    @Test
+    public void canAttack() {
+        nightingale = new Cleric("Nightingale", "Cleric", 200, 0);
+        thatcher.attack(nightingale, 10);
+
     }
 }
 
