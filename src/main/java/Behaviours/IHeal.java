@@ -1,6 +1,4 @@
 package Behaviours;
-
-
 import Players.Character;
 
 public interface IHeal {
