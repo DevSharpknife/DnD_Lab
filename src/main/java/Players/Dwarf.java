@@ -7,4 +7,12 @@ public class Dwarf extends Melee {
         super(name, type, hp);
         this.beard = beard;
     }
+
+    public String getBeard() {
+        return beard;
+    }
+
+    public void setBeard(String beard) {
+        this.beard = beard;
+    }
 }

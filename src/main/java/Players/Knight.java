@@ -7,4 +7,12 @@ public class Knight extends Melee{
         super(name, type, hp);
         this.armour = armour;
     }
+
+    public String getArmour() {
+        return this.armour;
+    }
+
+    public void setArmour(String newArmour) {
+        this.armour = newArmour;
+    }
 }
