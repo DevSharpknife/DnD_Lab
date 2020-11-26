@@ -1,5 +1,5 @@
 package Behaviours;
 
 public interface ICast {
-    int spellAttack(int damage);
+    void spellAttack(Baddie baddie, int damage);
 }
