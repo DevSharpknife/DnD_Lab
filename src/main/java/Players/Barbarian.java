@@ -1,6 +1,9 @@
 package Players;
 
-public class Barbarian extends Melee {
+import Behaviours.IAttack;
+import Enemies.Baddie;
+
+public class Barbarian extends Melee implements IAttack {
     private String loinCloth;
 
     public Barbarian(String name, String type, int hp, String loinCloth) {
@@ -14,5 +17,10 @@ public class Barbarian extends Melee {
 
     public void setLoinCloth(String loinCloth) {
         this.loinCloth = loinCloth;
+    }
+
+    @Override
+    public void attack(Baddie baddie, int damage) {
+        baddie.removeHP(damage);
     }
 }

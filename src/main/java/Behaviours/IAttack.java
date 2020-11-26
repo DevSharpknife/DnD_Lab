@@ -1,5 +1,7 @@
 package Behaviours;
 
+import Enemies.Baddie;
+
 public interface IAttack {
-    int attack(int damage);
+    void attack(Baddie baddie, int damage);
 }
