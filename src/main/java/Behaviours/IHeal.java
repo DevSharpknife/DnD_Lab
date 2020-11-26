@@ -1,5 +1,8 @@
 package Behaviours;
 
+
+import Players.Character;
+
 public interface IHeal {
-    public void heal(int health);
+    public void heal(Character character, int health);
 }

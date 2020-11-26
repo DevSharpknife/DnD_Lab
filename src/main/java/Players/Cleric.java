@@ -13,8 +13,12 @@ public class Cleric extends Character implements IHeal {
         this.healingTools = new HashMap<>();
     }
 
+    public int getNumberOfHealingTools() {
+        return healingTools.size();
+    }
+
     @Override
-    public void heal(int health) {
-        this.setHp(this.getHp() + health);
+    public void heal(Character character, int health) {
+        character.setHp(character.getHp() + health);
     }
 }
