@@ -1,18 +1,13 @@
 package Players;
 
+import java.util.HashMap;
+
 public abstract class Melee extends Character {
-    private String weapon;
+    private HashMap<String, Integer> weapons;
 
-    public Melee(String name, String type, int hp, String weapon) {
+    public Melee(String name, String type, int hp) {
         super(name, type, hp);
-        this.weapon = weapon;
+        this.weapons = new HashMap<>();
     }
 
-    public String getWeapon() {
-        return weapon;
-    }
-
-    public void setWeapon(String weapon) {
-        this.weapon = weapon;
-    }
 }
