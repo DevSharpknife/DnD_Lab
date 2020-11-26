@@ -4,7 +4,7 @@ public abstract class Character {
     private String name;
     private String type;
     private int hp;
-    
+
 
     public Character(String name, String type, int hp) {
         this.name = name;
@@ -26,5 +26,13 @@ public abstract class Character {
 
     public void setHp(int hp) {
         this.hp = hp;
+    }
+
+    public void addHP(int healing) {
+        this.hp = hp += healing;
+    }
+
+    public void removeHP(int damage) {
+        this.hp = hp -= damage;
     }
 }
