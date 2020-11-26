@@ -16,8 +16,16 @@ public abstract class Character {
         return name;
     }
 
+    public void setName(String newName) {
+        this.name = newName;
+    }
+
     public String getType() {
         return type;
+    }
+
+    public void setType(String newType) {
+        this.type = newType;
     }
 
     public int getHp() {

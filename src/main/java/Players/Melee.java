@@ -10,4 +10,8 @@ public abstract class Melee extends Character {
         this.weapons = new HashMap<>();
     }
 
+    public void addWeapon(String name, int damage){
+        weapons.put(name, damage);
+    }
+
 }
