@@ -1,6 +1,7 @@
 package Players;
 
 import Behaviours.ICast;
+import Enemies.Baddie;
 
 public class Wizard extends Caster implements ICast {
 
@@ -21,6 +22,6 @@ public class Wizard extends Caster implements ICast {
 
     @Override
     public void spellAttack(Baddie baddie, int damage) {
-        baddie.removeHp(damage);
+        baddie.removeHP(damage);
     }
 }

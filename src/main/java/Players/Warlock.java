@@ -1,6 +1,7 @@
 package Players;
 
 import Behaviours.ICast;
+import Enemies.Baddie;
 
 public class Warlock extends Caster implements ICast {
 
@@ -15,8 +16,9 @@ public class Warlock extends Caster implements ICast {
         return demonGod;
     }
 
+
     @Override
     public void spellAttack(Baddie baddie, int damage) {
-        baddie.removeHp(damage);
+        baddie.removeHP(damage);
     }
 }
