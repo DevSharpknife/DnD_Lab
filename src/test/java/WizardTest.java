@@ -11,7 +11,7 @@ public class WizardTest {
 
     @Before
     public void before() {
-        garyPotter = new Wizard("Gary Potter", "Wizard", 250, "Brown", "Purple");
+        garyPotter = new Wizard("Gary Potter", "Wizard", 250, 333, "Brown", "Purple");
     }
 
     @Test

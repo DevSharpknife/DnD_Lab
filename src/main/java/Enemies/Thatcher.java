@@ -3,8 +3,8 @@ package Enemies;
 public class Thatcher extends Baddie {
     private String weapon;
 
-    public Thatcher(String name, String type, int hp, String weapon) {
-        super(name, type, hp);
+    public Thatcher(String name, String type, int hp, int loot, String weapon) {
+        super(name, type, hp, loot);
         this.weapon = weapon;
     }
 

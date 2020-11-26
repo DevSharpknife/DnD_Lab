@@ -6,8 +6,8 @@ import Enemies.Baddie;
 public class Knight extends Melee implements IAttack {
     private String armour;
 
-    public Knight(String name, String type, int hp, String armour) {
-        super(name, type, hp);
+    public Knight(String name, String type, int hp, int gp, String armour) {
+        super(name, type, hp, gp);
         this.armour = armour;
     }
 

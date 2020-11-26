@@ -6,8 +6,8 @@ import Enemies.Baddie;
 public class Dwarf extends Melee implements IAttack {
     private String beard;
 
-    public Dwarf(String name, String type, int hp, String beard) {
-        super(name, type, hp);
+    public Dwarf(String name, String type, int hp, int gp, String beard) {
+        super(name, type, hp, gp);
         this.beard = beard;
     }
 

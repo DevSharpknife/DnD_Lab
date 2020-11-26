@@ -4,11 +4,13 @@ public abstract class Baddie {
     private String name;
     private String type;
     private int hp;
+    private int loot;
 
-    public Baddie(String name, String type, int hp) {
+    public Baddie(String name, String type, int hp, int loot) {
         this.name = name;
         this.type = type;
         this.hp = hp;
+        this.loot = loot;
     }
 
     public String getName() {
@@ -33,6 +35,14 @@ public abstract class Baddie {
 
     public void setHP(int hp) {
         this.hp = hp;
+    }
+
+    public int getLoot() {
+        return loot;
+    }
+
+    public void setLoot(int loot) {
+        this.loot = loot;
     }
 
     public void addHP(int healing) {

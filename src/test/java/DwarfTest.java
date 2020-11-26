@@ -12,7 +12,7 @@ public class DwarfTest {
 
     @Before
     public void setUp() {
-        dwarf = new Dwarf("Gimli", "Son of Gloin", 180, "A GREAT BIG BUSHY BEARD");
+        dwarf = new Dwarf("Gimli", "Son of Gloin", 180, 800,"A GREAT BIG BUSHY BEARD");
     }
 
 
@@ -61,7 +61,7 @@ public class DwarfTest {
 
     @Test
     public void canAttackBaddie() {
-        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, "Venomous Tongue");
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, 1200, "Venomous Tongue");
         dwarf.attack(thatcher, 50);
         assertEquals(950, thatcher.getHP());
     }

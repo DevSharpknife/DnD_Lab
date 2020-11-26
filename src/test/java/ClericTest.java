@@ -13,8 +13,8 @@ public class ClericTest {
 
     @Before
     public void before() {
-        nightingale = new Cleric("Nightingale", "Cleric", 200);
-        gimli = new Dwarf("Gimli", "Dwarf", 130, "MASSIVE");
+        nightingale = new Cleric("Nightingale", "Cleric", 200, 0);
+        gimli = new Dwarf("Gimli", "Dwarf", 130, 2000, "MASSIVE");
     }
 
     @Test

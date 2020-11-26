@@ -10,7 +10,7 @@ public class WarlockTest {
 
     @Before
     public void before() {
-        mudblood = new Warlock("Mudblood", "Warlock", 100, "Skinless", "Margaret Thatcher");
+        mudblood = new Warlock("Mudblood", "Warlock", 100, 666, "Skinless", "Margaret Thatcher");
     }
 
     @Test

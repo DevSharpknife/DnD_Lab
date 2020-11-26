@@ -12,7 +12,7 @@ public class BarbarianTest {
 
     @Before
     public void setUp() {
-        barbarian = new Barbarian("Conan", "Angry man", 200, "Itsy Bitsy Teeny Weeny Yellow Polka Dot Mankini");
+        barbarian = new Barbarian("Conan", "Angry man", 200, 100, "Itsy Bitsy Teeny Weeny Yellow Polka Dot Mankini");
     }
 
 
@@ -61,7 +61,7 @@ public class BarbarianTest {
 
     @Test
     public void canAttackBaddie() {
-        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, "Venomous Tongue");
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, 1200, "Venomous Tongue");
         barbarian.attack(thatcher, 50);
         assertEquals(950, thatcher.getHP());
     }

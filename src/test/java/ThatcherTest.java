@@ -10,7 +10,7 @@ public class ThatcherTest {
 
     @Before
     public void setUp() {
-        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, "Venomous Tongue");
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, 1200, "Venomous Tongue");
     }
 
 

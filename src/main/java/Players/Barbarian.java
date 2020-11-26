@@ -6,8 +6,8 @@ import Enemies.Baddie;
 public class Barbarian extends Melee implements IAttack {
     private String loinCloth;
 
-    public Barbarian(String name, String type, int hp, String loinCloth) {
-        super(name, type, hp);
+    public Barbarian(String name, String type, int hp, int gp, String loinCloth) {
+        super(name, type, hp, gp);
         this.loinCloth = loinCloth;
     }
 
