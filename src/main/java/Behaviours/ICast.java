@@ -1,7 +1,7 @@
 package Behaviours;
 
-import Enemies.Baddie;
+import Players.Character;
 
 public interface ICast {
-    void spellAttack(Baddie baddie, int damage);
+    void spellAttack(Character character, int damage);
 }

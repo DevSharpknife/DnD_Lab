@@ -1,14 +1,13 @@
 package Players;
 
 import Behaviours.ICast;
-import Enemies.Baddie;
 
 public class Warlock extends Caster implements ICast {
 
     private String demonGod;
 
-    public Warlock(String name, String type, int hp, int gp, String wand, String demonGod) {
-        super(name, type, hp, gp, wand);
+    public Warlock(String name, String type, int hp, int gp, boolean isBaddie, String wand, String demonGod) {
+        super(name, type, hp, gp, isBaddie, wand);
         this.demonGod = demonGod;
     }
 
@@ -18,7 +17,7 @@ public class Warlock extends Caster implements ICast {
 
 
     @Override
-    public void spellAttack(Baddie baddie, int damage) {
-        baddie.removeHP(damage);
+    public void spellAttack(Character character, int damage) {
+        character.removeHP(damage);
     }
 }

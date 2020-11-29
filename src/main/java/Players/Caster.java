@@ -9,8 +9,8 @@ public abstract class Caster extends Character {
     private String wand;
     private HashMap<String, Integer> spells;
 
-    public Caster(String name, String type, int hp, int gp, String wand) {
-        super(name, type, hp, gp);
+    public Caster(String name, String type, int hp, int gp, boolean isBaddie, String wand) {
+        super(name, type, hp, gp, isBaddie);
         this.mythicalCreature = new HashMap<>();
         this.wand = wand;
         this.spells = new HashMap<>();

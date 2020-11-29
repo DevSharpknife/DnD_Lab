@@ -1,15 +1,16 @@
 package Players;
 
+import Behaviours.IAttack;
 import Behaviours.IHeal;
 
 import java.util.HashMap;
 
-public class Cleric extends Character implements IHeal {
+public class Cleric extends Character implements IHeal, IAttack {
 
     private HashMap<String, Integer> healingTools;
 
-    public Cleric(String name, String type, int hp, int gp) {
-        super(name, type, hp, gp);
+    public Cleric(String name, String type, int hp, int gp, boolean isBaddie) {
+        super(name, type, hp, gp, isBaddie);
         this.healingTools = new HashMap<>();
     }
 

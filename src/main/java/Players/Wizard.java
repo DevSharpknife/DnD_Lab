@@ -1,14 +1,13 @@
 package Players;
 
 import Behaviours.ICast;
-import Enemies.Baddie;
 
 public class Wizard extends Caster implements ICast {
 
     private String robes;
 
-    public Wizard(String name, String type, int hp, int gp, String wand, String robes) {
-        super(name, type, hp, gp, wand);
+    public Wizard(String name, String type, int hp, int gp, boolean isBaddie, String wand, String robes) {
+        super(name, type, hp, gp, isBaddie, wand);
         this.robes = robes;
     }
 
@@ -21,7 +20,7 @@ public class Wizard extends Caster implements ICast {
     }
 
     @Override
-    public void spellAttack(Baddie baddie, int damage) {
-        baddie.removeHP(damage);
+    public void spellAttack(Character character, int damage) {
+        character.removeHP(damage);
     }
 }

@@ -1,12 +1,13 @@
 package Enemies;
 
 import Behaviours.IAttack;
+import Players.Character;
 
-public class Thatcher extends Baddie implements IAttack {
+public class Thatcher extends Character implements IAttack {
     private String weapon;
 
-    public Thatcher(String name, String type, int hp, int loot, String weapon) {
-        super(name, type, hp, loot);
+    public Thatcher(String name, String type, int hp, int gp, boolean isBaddie, String weapon) {
+        super(name, type, hp, gp, isBaddie);
         this.weapon = weapon;
     }
 

@@ -1,13 +1,12 @@
 package Players;
 
 import Behaviours.IAttack;
-import Enemies.Baddie;
 
 public class Knight extends Melee implements IAttack {
     private String armour;
 
-    public Knight(String name, String type, int hp, int gp, String armour) {
-        super(name, type, hp, gp);
+    public Knight(String name, String type, int hp, int gp, boolean isBaddie, String armour) {
+        super(name, type, hp, gp, isBaddie);
         this.armour = armour;
     }
 
@@ -20,7 +19,7 @@ public class Knight extends Melee implements IAttack {
     }
 
     @Override
-    public void attack(Baddie baddie, int damage) {
-        baddie.removeHP(damage);
+    public void attack(Character character, int damage) {
+        character.removeHP(damage);
     }
 }

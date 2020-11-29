@@ -12,7 +12,7 @@ public class ThatcherTest {
 
     @Before
     public void setUp() {
-        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, 1200, "Venomous Tongue");
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, 1200, true, "Venomous Tongue");
     }
 
 
@@ -28,7 +28,7 @@ public class ThatcherTest {
 
     @Test
     public void canGetHP() {
-        assertEquals(1000, thatcher.getHP());
+        assertEquals(1000, thatcher.getHp());
     }
 
     @Test
@@ -49,8 +49,8 @@ public class ThatcherTest {
 
     @Test
     public void canSetHP() {
-        thatcher.setHP(10);
-        assertEquals(10, thatcher.getHP());
+        thatcher.setHp(10);
+        assertEquals(10, thatcher.getHp());
     }
 
     @Test
@@ -62,18 +62,18 @@ public class ThatcherTest {
     @Test
     public void canAddHP() {
         thatcher.addHP(50);
-        assertEquals(1050, thatcher.getHP());
+        assertEquals(1050, thatcher.getHp());
     }
 
     @Test
     public void canRemoveHP() {
         thatcher.removeHP(100);
-        assertEquals(900, thatcher.getHP());
+        assertEquals(900, thatcher.getHp());
     }
 
     @Test
     public void canAttack() {
-        nightingale = new Cleric("Nightingale", "Cleric", 200, 0);
+        nightingale = new Cleric("Nightingale", "Cleric", 200, 0, false);
         thatcher.attack(nightingale, 10);
 
     }

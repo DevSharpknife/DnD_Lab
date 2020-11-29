@@ -1,13 +1,12 @@
 package Players;
 
 import Behaviours.IAttack;
-import Enemies.Baddie;
 
 public class Barbarian extends Melee implements IAttack {
     private String loinCloth;
 
-    public Barbarian(String name, String type, int hp, int gp, String loinCloth) {
-        super(name, type, hp, gp);
+    public Barbarian(String name, String type, int hp, int gp, boolean isBaddie, String loinCloth) {
+        super(name, type, hp, gp, isBaddie);
         this.loinCloth = loinCloth;
     }
 
@@ -20,7 +19,7 @@ public class Barbarian extends Melee implements IAttack {
     }
 
     @Override
-    public void attack(Baddie baddie, int damage) {
-        baddie.removeHP(damage);
+    public void attack(Character character, int damage) {
+        character.removeHP(damage);
     }
 }

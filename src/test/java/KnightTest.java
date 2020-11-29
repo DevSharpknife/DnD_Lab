@@ -12,7 +12,7 @@ public class KnightTest {
 
     @Before
     public void setUp() {
-        knight = new Knight("Aragorn", "Strider", 120, 20, "Robin Hood Gear");
+        knight = new Knight("Aragorn", "Strider", 120, 20, false, "Robin Hood Gear");
     }
 
 
@@ -61,9 +61,9 @@ public class KnightTest {
 
     @Test
     public void canAttackBaddie() {
-        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, 1200, "Venomous Tongue");
+        thatcher = new Thatcher("Maggie", "Cold Bitch", 1000, 1200, true, "Venomous Tongue");
         knight.attack(thatcher, 50);
-        assertEquals(950, thatcher.getHP());
+        assertEquals(950, thatcher.getHp());
     }
 }
 

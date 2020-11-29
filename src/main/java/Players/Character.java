@@ -5,13 +5,15 @@ public abstract class Character {
     private String type;
     private int hp;
     private int gp;
+    private boolean isBaddie;
 
 
-    public Character(String name, String type, int hp, int gp) {
+    public Character(String name, String type, int hp, int gp, boolean isBaddie) {
         this.name = name;
         this.type = type;
         this.hp = hp;
         this.gp = gp;
+        this.isBaddie = isBaddie;
     }
 
     public String getName() {
@@ -19,7 +21,7 @@ public abstract class Character {
     }
 
     public void setName(String newName) {
-        this.name = newName;
+        name = newName;
     }
 
     public String getType() {
@@ -27,15 +29,15 @@ public abstract class Character {
     }
 
     public void setType(String newType) {
-        this.type = newType;
+        type = newType;
     }
 
     public int getHp() {
         return hp;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setHp(int newHp) {
+        hp = newHp;
     }
 
     public int getGP() {
@@ -46,19 +48,31 @@ public abstract class Character {
         this.gp = gp;
     }
 
+    public boolean isBaddie() {
+        return isBaddie;
+    }
+
+    public void setBaddie(boolean baddie) {
+        isBaddie = baddie;
+    }
+
     public void addHP(int healing) {
-        this.hp = hp += healing;
+        this.hp += healing;
     }
 
     public void removeHP(int damage) {
-        this.hp = hp -= damage;
+        this.hp -= damage;
     }
 
     public void addGP(int gold) {
-        this.gp = gp += gold;
+        gp += gold;
     }
 
     public void removeGP(int gold) {
-        this.gp = gp -= gold;
+        gp -= gold;
+    }
+
+    public void attack(Character character, int damage) {
+
     }
 }
