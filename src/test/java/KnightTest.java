@@ -1,4 +1,4 @@
-import Enemies.Thatcher;
+import Baddies.Thatcher;
 import Players.Knight;
 import org.junit.Before;
 import org.junit.Test;

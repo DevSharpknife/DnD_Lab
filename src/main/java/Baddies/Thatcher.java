@@ -1,4 +1,4 @@
-package Enemies;
+package Baddies;
 
 import Behaviours.IAttack;
 import Players.Character;

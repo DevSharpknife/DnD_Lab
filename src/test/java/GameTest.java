@@ -1,4 +1,4 @@
-import Enemies.Thatcher;
+import Baddies.Thatcher;
 import Levels.Game;
 import Players.Barbarian;
 import org.junit.Test;
